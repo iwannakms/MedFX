@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="603.0" prefWidth="801.0" style="-fx-background-color: #2E3348;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.nucha.IndexPatientController">
+   <children>
+      <AnchorPane layoutY="84.0" prefHeight="80.0" prefWidth="800.0" style="-fx-border-color: #fafafa;">
+         <children>
+            <Label layoutX="32.0" layoutY="19.0" prefHeight="27.0" prefWidth="81.0" text="Welcome" textFill="#fcf6f6">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="first_name_label" layoutX="113.0" layoutY="19.0" prefHeight="27.0" prefWidth="81.0" textFill="#fcf6f6">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="kgs_money_label" layoutX="459.0" layoutY="19.0" prefHeight="27.0" prefWidth="138.0" textFill="#fcf6f6">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="usd_money_label" layoutX="648.0" layoutY="19.0" prefHeight="27.0" prefWidth="138.0" textFill="#fcf6f6">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutY="162.0" prefHeight="441.0" prefWidth="800.0" style="-fx-background-color: #fafafa;" />
+      <Label layoutX="273.0" layoutY="11.0" prefHeight="64.0" prefWidth="256.0" text="MEDICAL SERVICES" textFill="#fcf6f6">
+         <font>
+            <Font size="29.0" />
+         </font>
+      </Label>
+      <Button fx:id="exit_button" layoutX="706.0" layoutY="25.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="81.0" style="-fx-background-color: #2E3348; -fx-border-color: #fafafa;" text="Log out" textAlignment="RIGHT" textFill="#fcf6f6">
+         <font>
+            <Font name="Leelawadee UI Semilight" size="15.0" />
+         </font>
+      </Button>
+      <Label fx:id="login_label" layoutX="605.0" layoutY="30.0" prefHeight="27.0" prefWidth="81.0" textFill="#fcf6f6">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <TabPane fx:id="menu_tab" layoutY="160.0" prefHeight="447.0" prefWidth="801.0" tabClosingPolicy="UNAVAILABLE">
+         <tabs>
+            <Tab fx:id="treatments_tab" style="-fx-background-color: #2E3348; -fx-text-base-color: #fcf6f6;" text="treatments">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="treatments_table" prefHeight="365.0" prefWidth="800.0">
+                           <columns>
+                              <TableColumn fx:id="first_name_column" prefWidth="112.0" text="first name" />
+                              <TableColumn fx:id="last_name_column" prefWidth="121.0" text="last name" />
+                              <TableColumn fx:id="treatment_name_column" prefWidth="207.0" text="treatment name" />
+                              <TableColumn fx:id="start_column" prefWidth="131.0" text="start" />
+                              <TableColumn fx:id="end_column" prefWidth="125.0" text="end" />
+                              <TableColumn fx:id="price_column" prefWidth="102.0" text="price" />
+                           </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+         </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>
